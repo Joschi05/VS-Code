@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bert Weigel – Malerei & Grafik</title>
+  <meta name="description" content="Portfolio des Künstlers Bert Weigel – Malerei und Druckgrafik aus Norddeutschland. Küstenlandschaften, Architektur und Porträts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Bebas Neue"', '"Anton"', 'Impact', '"Arial Black"', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              border: 'rgba(26,22,18,0.08)',
+              bg:     'rgba(255,255,255,0.7)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#f2ede6] text-[#1a1612] font-sans antialiased">
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║              NAVIGATION             ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between glass-nav rounded-full px-6 py-3">
+
+      <!-- Logo -->
+      <a href="#top" class="leading-tight">
+        <div class="font-display text-xl text-[#1a1612] tracking-widest">BERT WEIGEL</div>
+        <div class="text-[10px] text-[#7a746e] tracking-[0.15em] uppercase hidden sm:block">Malerei & Grafik</div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#ueber"   class="nav-link text-sm text-gray-400 hover:text-white transition-colors tracking-wide">Über mich</a>
+        <a href="#werke"   class="nav-link text-sm text-gray-400 hover:text-white transition-colors tracking-wide">Werke</a>
+        <a href="#kontakt" class="nav-link text-sm text-gray-400 hover:text-white transition-colors tracking-wide">Kontakt</a>
+      </div>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="mailto:bert.weigel@gmx.de"
+           class="hidden sm:inline-flex items-center gap-2 text-sm text-[#1a1612] glass-btn px-4 py-2 rounded-xl hover:scale-[1.03] transition-all">
+          <svg class="w-3.5 h-3.5 text-[#5b9bd5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Kontakt
+        </a>
+        <button id="menu-btn" class="md:hidden glass-btn p-2 rounded-xl text-gray-400 hover:text-white transition-colors">
+          <svg id="menu-icon-open"  class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-2 glass-nav rounded-3xl px-6 py-5 max-w-7xl mx-auto">
+      <div class="flex flex-col gap-4">
+        <a href="#ueber"   class="text-[#7a746e] hover:text-[#1a1612] transition-colors py-1">Über mich</a>
+        <a href="#werke"   class="text-[#7a746e] hover:text-[#1a1612] transition-colors py-1">Werke</a>
+        <a href="#kontakt" class="text-[#7a746e] hover:text-[#1a1612] transition-colors py-1">Kontakt</a>
+        <a href="mailto:bert.weigel@gmx.de" class="text-[#5b9bd5] hover:text-[#7ab3e0] transition-colors py-1">bert.weigel@gmx.de</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║                HERO                 ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="top" class="hero-section relative min-h-screen flex flex-col justify-end overflow-hidden">
+
+    <!-- Gemälde als Hintergrund -->
+    <div class="hero-bg absolute inset-0"></div>
+
+    <!-- Fade nach unten zur Seitenfarbe -->
+    <div class="hero-overlay-fade"></div>
+    <div class="hero-overlay-sides"></div>
+
+    <!-- Hero Text – minimal, unten links -->
+    <div class="relative z-10 px-8 sm:px-16 pb-20 max-w-7xl mx-auto w-full">
+      <h1 class="font-display text-[clamp(4rem,12vw,10rem)] text-[#1a1612] leading-none mb-3 tracking-wide block">
+        BERT WEIGEL
+      </h1>
+      <p class="text-[#1a1612]/55 text-xs tracking-[0.35em] uppercase mb-8 font-sans block">
+        Malerei &amp; Grafik · Detmold
+      </p>
+      <a href="#werke" class="hero-cta px-7 py-3 rounded-full text-sm font-sans font-medium tracking-widest uppercase inline-block">
+        Werke entdecken
+      </a>
+    </div>
+
+    <!-- Scroll-Indikator -->
+    <div class="absolute bottom-8 right-8 sm:right-16 animate-bounce opacity-40">
+      <svg class="w-5 h-5 text-[#1a1612]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║         ÜBER DEN KÜNSTLER           ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="ueber" class="relative py-28 px-6">
+    <!-- Dezenter Hintergrund-Glow -->
+    <div class="section-glow-left absolute"></div>
+
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Section Header -->
+      <div class="text-center mb-16 fade-in">
+        <span class="text-[#1d5468] text-xs tracking-[0.35em] uppercase mb-3 block">Über den Künstler</span>
+        <h2 class="font-display text-5xl sm:text-6xl text-[#1a1612] tracking-wide">Biografie</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8 items-start">
+
+        <!-- Hauptkarte: Biografie -->
+        <div class="lg:col-span-3 glass-card p-8 sm:p-10 rounded-3xl fade-in">
+          <div class="flex items-start gap-6 mb-8">
+            <img src="images/portrait_bw.jpg.png"
+                 alt="Bert Weigel"
+                 class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top flex-shrink-0 shadow-md">
+            <div class="pt-1">
+              <h3 class="font-display text-3xl text-[#1a1612] tracking-wide">Bert Weigel</h3>
+              <p class="text-[#7a746e] text-sm tracking-wide mt-1">* 02. April 1970</p>
+            </div>
+          </div>
+
+          <div class="space-y-5 text-[#3a3530] text-sm sm:text-base leading-relaxed">
+            <p>
+              Bert Weigel studierte <span class="text-[#1a1612] font-medium">Illustration und Druckgrafik</span>
+              bei Prof. Wolfgang Troschke und Prof. Rolf Escher an der
+              <span class="text-[#1a1612] font-medium">Fachhochschule Münster</span>.
+            </p>
+            <p>
+              In seinen Werken verdichtet er das Wechselspiel von Licht, Textur und Atmosphäre —
+              geprägt durch die weiten Küstenlandschaften der Ostsee, die markante Architektur
+              historischer Ostseebäder und die eigentümliche Stille norddeutscher Wälder.
+              Charakteristisch für seinen Stil ist die Verbindung von
+              <span class="text-[#1d5468] font-medium">Acrylmalerei und Frottage-Technik</span>,
+              die seinen Werken eine unverwechselbare Tiefe und Oberflächenstruktur verleiht.
+            </p>
+            <p>
+              Weigel ist Mitglied der
+              <span class="text-[#1d5468] font-medium">13.14 Produzentengalerie</span> in Detmold.
+            </p>
+          </div>
+
+          <!-- Highlight: Ausstellung -->
+          <div class="mt-8 pt-7 border-t border-black/8">
+            <div class="flex items-start gap-4">
+              <div class="w-9 h-9 rounded-xl bio-icon-amber flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs text-[#7a746e] uppercase tracking-widest mb-1">Einzelausstellung</div>
+                <p class="text-[#3a3530] text-sm">
+                  <span class="text-[#1a1612] font-semibold">2004</span> —
+                  Showroom der <span class="text-amber-700">Samuelis Baumgarte Galerie</span>, Bielefeld
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rechte Spalte: Zitat + Statistiken -->
+        <div class="lg:col-span-2 space-y-5">
+
+          <!-- Zitat -->
+          <blockquote class="glass-card p-7 rounded-3xl border-l-[3px] border-[#1d5468]/30 fade-in">
+            <p class="text-lg text-[#3a3530] italic leading-relaxed font-sans">
+              „Das Licht an der Ostsee hat eine Qualität, die sich in keinem anderen Farbton der Welt wiederholen lässt."
+            </p>
+            <footer class="mt-4 text-xs text-[#7a746e] tracking-wide">— Bert Weigel</footer>
+          </blockquote>
+
+          <!-- Statistik-Grid -->
+          <div class="grid grid-cols-2 gap-4 fade-in">
+            <div class="glass-card p-6 rounded-2xl text-center hover:scale-[1.02] transition-transform">
+              <div class="font-display text-4xl text-[#1d5468] tracking-wide mb-1">30+</div>
+              <div class="text-[11px] text-[#7a746e] tracking-widest uppercase">Jahre Kunst</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center hover:scale-[1.02] transition-transform">
+              <div class="font-display text-4xl text-[#1d5468] tracking-wide mb-1">4</div>
+              <div class="text-[11px] text-[#7a746e] tracking-widest uppercase">Kollektionen</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center hover:scale-[1.02] transition-transform">
+              <div class="font-display text-4xl text-[#1d5468] tracking-wide mb-1">13+</div>
+              <div class="text-[11px] text-[#7a746e] tracking-widest uppercase">Darß-Werke</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center hover:scale-[1.02] transition-transform">
+              <div class="font-display text-4xl text-[#1d5468] tracking-wide mb-1">FH</div>
+              <div class="text-[11px] text-[#7a746e] tracking-widest uppercase">Münster</div>
+            </div>
+          </div>
+
+          <!-- Kontakt Kurzinfo -->
+          <div class="glass-card p-5 rounded-2xl fade-in">
+            <div class="space-y-3">
+              <a href="mailto:bert.weigel@gmx.de" class="flex items-center gap-3 text-sm text-[#7a746e] hover:text-[#1d5468] transition-colors">
+                <svg class="w-4 h-4 text-[#1d5468] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                </svg>
+                bert.weigel@gmx.de
+              </a>
+              <a href="http://www.bertweigel.de" target="_blank" rel="noopener" class="flex items-center gap-3 text-sm text-[#7a746e] hover:text-[#1d5468] transition-colors">
+                <svg class="w-4 h-4 text-[#1d5468] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+                </svg>
+                www.bertweigel.de
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║          GALERIE / WERKE            ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="werke" class="relative py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Section Header -->
+      <div class="text-center mb-12 fade-in">
+        <span class="text-[#1d5468] text-xs tracking-[0.35em] uppercase mb-3 block">Kollektion</span>
+        <h2 class="font-display text-5xl sm:text-6xl text-[#1a1612] tracking-wide mb-4">Werke</h2>
+        <p class="text-[#7a746e] max-w-md mx-auto text-sm leading-relaxed">
+          Von den Küstenlandschaften Heiligendamms bis zu stillen Porträts —
+          eine Auswahl aus dem Gesamtwerk.
+        </p>
+      </div>
+
+      <!-- Filter-Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in">
+        <button class="filter-btn active" data-filter="all">Alle Werke</button>
+        <button class="filter-btn" data-filter="heiligendamm">
+          <span class="category-dot dot-heiligendamm"></span>Heiligendamm
+        </button>
+        <button class="filter-btn" data-filter="darss">
+          <span class="category-dot dot-darss"></span>Darß
+        </button>
+        <button class="filter-btn" data-filter="architektur">
+          <span class="category-dot dot-architektur"></span>Architektur
+        </button>
+        <button class="filter-btn" data-filter="portraets">
+          <span class="category-dot dot-portraets"></span>Porträts
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <!-- Wird per JavaScript befüllt -->
+      </div>
+
+      <!-- Mehr anzeigen Hinweis -->
+      <div id="gallery-hint" class="text-center mt-12 fade-in hidden">
+        <p class="text-[#7a746e] text-sm">
+          Weitere Werke auf Anfrage — <a href="mailto:bert.weigel@gmx.de" class="text-[#1d5468] hover:text-[#1a1612] transition-colors">bert.weigel@gmx.de</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║              KONTAKT                ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <section id="kontakt" class="relative py-28 px-6">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="text-center mb-16 fade-in">
+        <span class="text-[#1d5468] text-xs tracking-[0.35em] uppercase mb-3 block">Kontakt</span>
+        <h2 class="font-display text-5xl sm:text-6xl text-[#1a1612] tracking-wide mb-4">In Verbindung treten</h2>
+        <p class="text-[#7a746e] max-w-md mx-auto text-sm leading-relaxed">
+          Anfragen zu Werken, Ausstellungen oder Kooperationen —<br>
+          Bert Weigel freut sich auf Ihre Nachricht.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5 mb-5">
+        <!-- E-Mail -->
+        <a href="mailto:bert.weigel@gmx.de"
+           class="glass-card p-8 rounded-3xl hover:scale-[1.02] hover:border-teal-500/20 transition-all group fade-in">
+          <div class="w-12 h-12 rounded-2xl contact-icon-turquoise flex items-center justify-center mb-5 transition-colors">
+            <svg class="w-5 h-5 text-[#5b9bd5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+            </svg>
+          </div>
+          <div class="text-[11px] text-[#7a746e] uppercase tracking-widest mb-1">E-Mail</div>
+          <div class="text-[#1a1612] font-medium text-sm">bert.weigel@gmx.de</div>
+          <div class="text-xs text-[#7a746e] mt-1">Direkte Anfragen & Bestellungen</div>
+        </a>
+
+        <!-- Website -->
+        <a href="http://www.bertweigel.de" target="_blank" rel="noopener"
+           class="glass-card p-8 rounded-3xl hover:scale-[1.02] transition-all group fade-in">
+          <div class="w-12 h-12 rounded-2xl bio-icon-teal flex items-center justify-center mb-5 transition-colors">
+            <svg class="w-5 h-5 text-[#1d5468]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+            </svg>
+          </div>
+          <div class="text-[11px] text-[#7a746e] uppercase tracking-widest mb-1">Website</div>
+          <div class="text-[#1a1612] font-medium text-sm">www.bertweigel.de</div>
+          <div class="text-xs text-[#7a746e] mt-1">Gesamtwerk & Galerie</div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║               FOOTER               ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <footer class="relative py-10 px-6 border-t border-black/8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="font-display text-xl tracking-widest text-[#7a746e]">
+        BERT WEIGEL
+      </div>
+      <div class="flex items-center gap-6 text-xs text-[#7a746e]">
+        <a href="mailto:bert.weigel@gmx.de"      class="hover:text-[#1a1612] transition-colors">bert.weigel@gmx.de</a>
+        <a href="http://www.bertweigel.de" target="_blank" rel="noopener" class="hover:text-[#1a1612] transition-colors">www.bertweigel.de</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ╔══════════════════════════════════════╗ -->
+  <!-- ║              LIGHTBOX              ║ -->
+  <!-- ╚══════════════════════════════════════╝ -->
+  <div id="lightbox" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
+    <!-- Overlay -->
+    <div class="lightbox-overlay absolute inset-0" onclick="closeLightbox()"></div>
+
+    <!-- Modal -->
+    <div class="relative z-10 glass-lightbox rounded-3xl overflow-hidden w-full max-w-5xl max-h-[90vh] flex flex-col lg:flex-row">
+
+      <!-- Schließen-Button -->
+      <button onclick="closeLightbox()"
+              class="absolute top-4 right-4 z-20 glass-btn p-2.5 rounded-xl text-[#7a746e] hover:text-[#1a1612] transition-colors"
+              aria-label="Schließen">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- Bild -->
+      <div id="lightbox-img-container"
+           class="lg:w-3/5 aspect-[4/3] lg:aspect-auto relative flex-shrink-0 min-h-[240px]">
+      </div>
+
+      <!-- Info -->
+      <div class="lg:w-2/5 p-8 sm:p-10 flex flex-col justify-between">
+        <div>
+          <div class="text-[11px] text-[#5b9bd5] tracking-[0.25em] uppercase mb-3" id="lightbox-category"></div>
+          <h3 class="font-display text-4xl text-[#1a1612] tracking-wide mb-6 leading-tight" id="lightbox-title"></h3>
+
+          <div class="space-y-4">
+            <div class="glass-card-inner p-4 rounded-2xl">
+              <div class="text-[10px] text-[#7a746e] uppercase tracking-widest mb-1">Technik</div>
+              <div class="text-[#3a3530] text-sm" id="lightbox-technique"></div>
+            </div>
+            <div class="glass-card-inner p-4 rounded-2xl">
+              <div class="text-[10px] text-[#7a746e] uppercase tracking-widest mb-1">Maße</div>
+              <div class="text-[#3a3530] text-sm" id="lightbox-size"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-black/8 flex flex-col gap-3">
+          <a id="lightbox-contact"
+             href="mailto:bert.weigel@gmx.de"
+             class="hero-cta px-6 py-3 rounded-xl text-sm text-center font-medium tracking-widest uppercase">
+            Anfrage zu diesem Werk →
+          </a>
+          <button onclick="closeLightbox()"
+                  class="glass-btn-outline px-6 py-3 rounded-xl text-[#7a746e] text-sm hover:text-[#1a1612] transition-colors text-center">
+            Galerie weiter erkunden
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

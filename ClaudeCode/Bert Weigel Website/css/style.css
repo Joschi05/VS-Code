@@ -1,0 +1,371 @@
+/* ============================================================
+   BERT WEIGEL – Helles Design, klare Typografie
+   ============================================================ */
+
+/* ---------- Basis ---------- */
+
+:root {
+  --bg:          #f2ede6;
+  --bg-surface:  #ffffff;
+  --text:        #1a1612;
+  --text-muted:  #7a746e;
+  --accent:      #1d5468;
+  --accent-soft: #e2ecf0;
+  --border:      rgba(26, 22, 18, 0.09);
+  --shadow:      rgba(26, 22, 18, 0.07);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body::before, body::after { display: none; }
+
+/* ---------- Navbar (helles Glas) ---------- */
+
+.glass-nav {
+  background: rgba(255, 252, 248, 0.45);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 2px 24px rgba(26, 22, 18, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-nav.scrolled {
+  background: rgba(255, 252, 248, 0.75);
+  box-shadow: 0 4px 32px rgba(26, 22, 18, 0.1), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+/* Navbar-Links */
+.nav-link { color: var(--text-muted); }
+.nav-link:hover { color: var(--text); }
+
+/* ---------- Karten ---------- */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(26, 22, 18, 0.07);
+  box-shadow: 0 4px 24px var(--shadow), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.glass-card-inner {
+  background: rgba(242, 237, 230, 0.6);
+  border: 1px solid rgba(26, 22, 18, 0.06);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 22, 18, 0.1);
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 22, 18, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(26, 22, 18, 0.15);
+}
+
+.glass-btn-outline {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(26, 22, 18, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.25s;
+}
+.glass-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(26, 22, 18, 0.22);
+}
+
+.glass-lightbox {
+  background: rgba(248, 244, 238, 0.96);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(26, 22, 18, 0.1);
+  box-shadow: 0 32px 100px rgba(26, 22, 18, 0.2);
+}
+
+/* ---------- Hero ---------- */
+
+.hero-section { position: relative; }
+
+.hero-bg {
+  background:
+    url('../images/hero.jpg.png') center / cover no-repeat,
+    url('../images/hero.jpg')     center / cover no-repeat,
+    linear-gradient(160deg, #c8d8e4 0%, #d4cfc8 50%, #e0d8cc 100%);
+}
+
+/* Fade nach unten zur Seitenfarbe */
+.hero-overlay-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 45%,
+    rgba(242, 237, 230, 0.5) 70%,
+    rgba(242, 237, 230, 1) 100%
+  );
+}
+
+/* Subtile Seiten-Abdunklung für Tiefe */
+.hero-overlay-sides {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(242, 237, 230, 0.3) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(242, 237, 230, 0.3) 100%
+  );
+}
+
+/* ---------- Hero CTA ---------- */
+
+.hero-cta {
+  background: var(--text);
+  border: 1px solid var(--text);
+  color: var(--bg) !important;
+  display: inline-block;
+  margin-left: 0;
+  transition: all 0.25s ease;
+  letter-spacing: 0.08em;
+}
+.hero-cta:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(29, 84, 104, 0.25);
+}
+
+/* ---------- Anzeigeschrift (Bebas Neue) ---------- */
+
+.font-display {
+  font-family: 'Bebas Neue', 'Anton', Impact, 'Arial Black', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Filter-Buttons ---------- */
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.filter-btn:hover {
+  background: var(--bg-surface);
+  color: var(--text);
+  border-color: rgba(26, 22, 18, 0.15);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.filter-btn.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+  box-shadow: 0 4px 12px rgba(26, 22, 18, 0.18);
+}
+
+/* Kategorie-Punkte */
+.category-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dot-heiligendamm { background: #3b82f6; }
+.dot-darss        { background: #16a34a; }
+.dot-architektur  { background: #d97706; }
+.dot-portraets    { background: #db2777; }
+
+/* ---------- Gallery-Karten ---------- */
+
+.gallery-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #e8e2da;
+  border: 1px solid rgba(26, 22, 18, 0.08);
+  aspect-ratio: 3 / 4;
+  transition:
+    opacity   0.5s ease,
+    transform 0.5s ease,
+    box-shadow 0.3s ease;
+}
+.gallery-card:hover {
+  transform: translateY(-5px) scale(1.012) !important;
+  box-shadow: 0 20px 50px rgba(26, 22, 18, 0.18);
+}
+
+.gallery-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+.gallery-card:hover .gallery-card-bg { transform: scale(1.05); }
+
+.gallery-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gallery-card:hover img { transform: scale(1.05); }
+
+.gallery-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,22,18,0.82) 0%, rgba(26,22,18,0.2) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+}
+.gallery-card:hover .gallery-card-overlay { opacity: 1; }
+
+.gallery-card-info {
+  transform: translateY(8px);
+  transition: transform 0.3s ease;
+}
+.gallery-card:hover .gallery-card-info { transform: translateY(0); }
+
+.gallery-card-category {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.gallery-card-title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+.gallery-card-meta {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.65);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.cat-heiligendamm { color: #60a5fa; }
+.cat-darss        { color: #4ade80; }
+.cat-architektur  { color: #fbbf24; }
+.cat-portraets    { color: #f472b6; }
+
+/* ---------- Biografie-Icons ---------- */
+
+.bio-icon-teal {
+  background: rgba(29, 84, 104, 0.1);
+  border: 1px solid rgba(29, 84, 104, 0.2);
+}
+
+.contact-icon-turquoise {
+  background: rgba(91, 155, 213, 0.12);
+  border: 1px solid rgba(91, 155, 213, 0.28);
+}
+.bio-icon-amber {
+  background: rgba(180, 120, 20, 0.1);
+  border: 1px solid rgba(180, 120, 20, 0.2);
+}
+
+/* ---------- Kontakt-Karten ---------- */
+
+.contact-card-teal:hover { border-color: rgba(29, 84, 104, 0.25) !important; }
+.contact-card-blue:hover { border-color: rgba(37, 99, 235, 0.25) !important; }
+
+/* ---------- Lightbox ---------- */
+
+.lightbox-overlay {
+  background: rgba(26, 22, 18, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#lightbox {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#lightbox.open { opacity: 1; }
+
+/* Lightbox Textfarben für helles Theme */
+#lightbox-category  { color: var(--accent); }
+#lightbox-title     { color: var(--text); }
+#lightbox-technique { color: var(--text-muted); }
+#lightbox-size      { color: var(--text-muted); }
+
+/* ---------- Scroll-Animationen ---------- */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+.gallery-card {
+  opacity: 0;
+  transform: translateY(16px) scale(0.98);
+}
+.gallery-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.gallery-card:hover {
+  transform: translateY(-5px) scale(1.012) !important;
+}
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(26,22,18,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(26,22,18,0.25); }
+
+/* ---------- Selektion ---------- */
+
+::selection { background: rgba(29, 84, 104, 0.2); color: var(--text); }
+
+/* ---------- Section-Trenner ---------- */
+
+.section-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+/* ---------- Pulse-Dot ---------- */
+
+.glow-teal { animation: pulse-dot 2.5s ease-in-out infinite; }
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(29, 84, 104, 0.5); }
+  50%       { box-shadow: 0 0 0 5px rgba(29, 84, 104, 0); }
+}
