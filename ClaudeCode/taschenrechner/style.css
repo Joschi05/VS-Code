@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #16213e;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+.display {
+    background-color: #0f3460;
+    border-radius: 12px;
+    padding: 20px 16px 12px;
+    margin-bottom: 20px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.expression {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    min-height: 1.2rem;
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+.result {
+    color: #e2e8f0;
+    font-size: 2.4rem;
+    font-weight: 300;
+    word-break: break-all;
+    transition: font-size 0.1s;
+}
+
+.result.small {
+    font-size: 1.6rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background-color: #1e3a5f;
+    color: #e2e8f0;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    padding: 18px 0;
+    cursor: pointer;
+    transition: background-color 0.15s, transform 0.1s;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #274d7a;
+}
+
+.btn:active {
+    transform: scale(0.94);
+    background-color: #1a3d63;
+}
+
+.btn-secondary {
+    background-color: #2d4a6e;
+    color: #93c5fd;
+}
+
+.btn-secondary:hover {
+    background-color: #3a5d87;
+}
+
+.btn-operator {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn-operator:hover {
+    background-color: #f39c12;
+}
+
+.btn-operator.active {
+    background-color: #f39c12;
+    color: #1a1a2e;
+}
+
+.btn-equals {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn-equals:hover {
+    background-color: #f39c12;
+}
+
+.btn-zero {
+    grid-column: span 2;
+    text-align: left;
+    padding-left: 24px;
+}
